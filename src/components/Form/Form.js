@@ -27,7 +27,7 @@ const formDisplay = () => {
 /* Progressbar */
 
 const checkProgress = () => {
-    if(page === 0){
+    /* if(page === 0){
         return (
             <div className='form-progressbar'>
 
@@ -49,7 +49,7 @@ const checkProgress = () => {
             </div>
 
         )
-    } else {
+    } else { */
         return (
             <div className='form-progressbar'>
 
@@ -87,10 +87,10 @@ const checkProgress = () => {
         )
         
     
-}}
+}/* } */
 
   return (
-    <section className='form-card'>
+    <div className='form-card' id='form-card'>
         <div className='progress-bar'>
             <div className='form-container'>
                 <div className='form-header'>
@@ -117,7 +117,7 @@ const checkProgress = () => {
                 </div>
             </div>
         </div>
-    </section>
+    </div>
   )
 }
 
