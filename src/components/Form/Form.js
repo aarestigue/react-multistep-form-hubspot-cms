@@ -9,6 +9,8 @@ import './form.scss'
 
 function Form() {
 const [page, setPage] = useState(0);
+
+/* Step views */
 const formTitles = ["Issue", "Details", "Customer", "Schedule", "Confirm"];
 const formDisplay = () => {
     if(page === 0){
@@ -27,29 +29,7 @@ const formDisplay = () => {
 /* Progressbar */
 
 const checkProgress = () => {
-    /* if(page === 0){
-        return (
-            <div className='form-progressbar'>
-
-                <div className={`form-step current`} id="0" >
-                        <span id={`current-circle`}></span>
-                        <p className='form-step current-title'>{formTitles[0]}</p>
-                </div>
-                {formTitles.map((title, index)=> {
-                if(index > 0){
-                    return (
-                        <div className={`form-step ${index}`} id={index} >
-                            <span id={`circle`}></span>
-                            <p className='form-step title'>{title}</p>
-                        </div>
-                            )
-                }
-                
-                })}
-            </div>
-
-        )
-    } else { */
+   
         return (
             <div className='form-progressbar'>
 
@@ -87,7 +67,7 @@ const checkProgress = () => {
         )
         
     
-}/* } */
+}
 
   return (
     <div className='form-card' id='form-card'>
