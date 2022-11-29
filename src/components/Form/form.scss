@@ -1,0 +1,89 @@
+@media screen and (min-width: 350px) and (max-width: 690px){
+    .form-card{
+        width: 100%;
+        height: 90%;
+        margin: 0rem;
+        z-index: 11;
+    }
+    .form-step {
+        width: 20%;
+        color: rgb(60, 181, 219, 0.6);
+        font-size: calc(4px + 2vmin);
+        padding: 0.05rem 0.2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-step .current-title, .completed-title {
+        width: 20%;
+        color: rgb(60, 181, 219, 1);
+        font-weight: bold;
+        font-size: calc(4px + 2vmin);
+        /* padding: 0.03rem 0.2rem; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-step .completed-title{
+        margin: 0.2rem 0rem 0.5rem 0rem;
+    }
+
+    .form-step #current-circle {
+    width: 18px;
+    height: 18px;
+    background: rgb(60, 181, 219, 1);
+    border: 1px solid rgb(60, 181, 219);
+    border-radius: 50%;
+    display: inline-block;
+    }
+
+    .form-step .completed-icon {
+        width: 19px;
+        height: 19px;
+        display: inline-block;
+        }
+
+
+    #circle {
+    width: 17px;
+    height: 17px;
+    background: rgb(60, 181, 219, 0);
+    border: 1px solid rgba(60, 181, 219, 0.702);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  .form-progressbar{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form-body{
+    padding: 0.5rem;
+  }
+
+  .form-footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  }
+
+  .form-footer button{
+    margin: 0 0.5rem 0 0.05rem;
+  }
+
+  .form-labels{
+    color: white;
+    margin: 1px 1px 0 1px;
+  }
+
+
+}
