@@ -7,6 +7,7 @@ function formikSchema() {
         firstName : "",
         lastName: "",
         email: "",
+        phoneNumber:"",
         typeOfIssue: "",
         subType: "",
         issue: "",

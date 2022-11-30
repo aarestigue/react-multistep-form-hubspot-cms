@@ -1,36 +1,85 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import './Steps/customer.scss';
+import './Form/form.scss';
 
 
-function Customer() {
+function Customer({formik}) {
   const [isCustomer, setIsCustomer] = useState("");
 
-  if(isCustomer === "yes") {
-    console.log("yes")
-    return (
-        <div>
-            <label htmlFor="">Please enter your email</label>
-            <input type="email" />
-            <button>Lookup my details</button>
-        </div>
-    )
-  }
-  else if (isCustomer === "no"){
-    console.log("no")
-    return (
-        <div>
-            <label htmlFor="">Email</label>
-            <input type="email" />
-            <label htmlFor="">First Name</label>
-            <input type="text" />
-            <label htmlFor="">Last Name</label>
-            <input type="text" />
-            <label htmlFor="">Phone Number</label>
-            <input type="number" />
+  const checkCustomer = () => {
+    if(isCustomer === "yes") {
+      console.log("yes")
+      return (
+          <div>
+              <h6 className='form-labels'>Let's lookup your details</h6>
+              <label className='form-labels-customer' htmlFor="email">Please enter your email</label>
+              <input 
+              type="email" 
+              name='email'
+              id='email'
+              value={formik.values.email}
+              onChange={formik.handleChange('email')}
+              />
+              {/* <button>Lookup my details</button> */}
+          </div>
+      )
+    }
+    else if (isCustomer === "no"){
+      console.log("no")
+      return (
+          <div className='form-inputs-container'>
+              <label className='form-labels-customer' htmlFor="email">Email</label>
+              <input 
+              type="email" 
+              name='email'
+              id='email'
+              placeholder='Email'
+              value={formik.values.email}
+              onChange={formik.handleChange('email')}
+              />
 
-        </div>
-    )
+              <label className='form-labels-customer' htmlFor="">First Name</label>
+              <input 
+              type="text"
+              name='firstName'
+              id='firstName'
+              placeholder='First Name'
+              value={formik.values.firstName}
+              onChange={formik.handleChange('firstName')}
+              />
+
+              <label className='form-labels-customer' htmlFor="">Last Name</label>
+              <input 
+              type="text"
+              name='lastName'
+              id='lastName'
+              placeholder='Last Name'
+              value={formik.values.lastName}
+              onChange={formik.handleChange('lastName')} 
+              />
+
+              <label className='form-labels-customer' htmlFor="">Phone Number</label>
+              <input 
+              type="number" 
+              name='phoneNumber'
+              id='phoneNumber'
+              placeholder='Phone number'
+              value={formik.values.phoneNumber}
+              onChange={formik.handleChange('phoneNumber')}
+              />
+  
+          </div>
+      )
+    }
   }
+
+  useEffect(() => {
+    // declare the data fetching function
+    // call the function
+    checkCustomer()
+      // make sure to catch any error
+     }, [isCustomer])
+  
   return (
     
     <div className='customer-container'>
@@ -39,6 +88,7 @@ function Customer() {
             <button className='form-customer-btn' onClick={()=>setIsCustomer("yes")}>Yes</button>
             <button className='form-customer-btn' onClick={()=>setIsCustomer("no")}>No</button>
         </div>
+        {checkCustomer()}
     </div>
   )
 }
