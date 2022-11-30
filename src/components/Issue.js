@@ -2,7 +2,7 @@ import React from 'react';
 import Multiselect from 'multiselect-react-dropdown';
 import './Form/form.scss'
 
-function Issue() {
+function Issue({formik}) {
   const waterTypeOpt = ["Water Heater", "Water Treatment", "Plumbing"];
   const subTypeOpt = ["Tankless Water Heater", "Standard Water Heater"];
   const issueOpt = ["Water is not hot enough", "Water takes a long time to heat up"];
@@ -12,9 +12,12 @@ function Issue() {
     return <p>you selected an option</p>
   }
   return (
-    <div className='form-issue'>
+    <div className='form-issue'> 
         <h4>Issue</h4>
         <label className='form-labels' htmlFor="">Type of issue</label>
+        <input id="firstName" name="firstName" type='text' onChange={formik.handleChange}/>
+           
+       
         <Multiselect
             options={waterTypeOpt} // Options to display in the dropdown
             disablePreSelectedValues={true}
