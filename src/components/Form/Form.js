@@ -19,13 +19,13 @@ const formDisplay = () => {
     if(page === 0){
         return <Issue formik={formik}/>
     } else if(page === 1){
-        return <Details/>
+        return <Details formik={formik}/>
     } else if(page === 2){
-        return <Customer/>
+        return <Customer formik={formik}/>
     } else if(page===3){
-        return <Schedule/>
+        return <Schedule formik={formik}/>
     } else if(page === 4){
-        return <Confirm/>
+        return <Confirm formik={formik}/>
     }
 }
 
@@ -43,7 +43,13 @@ const formDisplay = () => {
                 <div className='form-body'>
                     <form onSubmit={formik.handleSubmit}>
                     {formDisplay()}
-                    <button type='submit'>submit</button>
+                    <button 
+                        style={{display : page === 4 ? "initial" : "none"}} 
+                        type='submit'
+                    >
+                        submit
+                    </button>
+                    
                     </form>
                     
                     
@@ -59,7 +65,7 @@ const formDisplay = () => {
                         disabled={page === formTitles.length - 1}
                         onClick={()=> {
                         setPage((currPage) => currPage + 1);}}>
-                            Continue
+                            Continue 
                     </button>
                 </div>
             </div>

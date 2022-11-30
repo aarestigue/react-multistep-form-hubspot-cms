@@ -1,10 +1,7 @@
 import React, {useState} from 'react';
 import './App.scss';
 
-import SpinningLogo from './components/SpinningLogo';
-import Card from './components/Card';
-import reactLogo from './images/logo.svg';
-import sprocketLogo from './images/sprocket.svg';
+
 import Modal from './components/Modal/Modal';
 import Form from './components/Form/Form';
 

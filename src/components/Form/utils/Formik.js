@@ -1,4 +1,4 @@
-import {useFormik} from 'formik';
+import { useField, Form, FormikProps, Formik, useFormik } from 'formik';
 
 function formikSchema() {
     
@@ -7,6 +7,11 @@ function formikSchema() {
         firstName : "",
         lastName: "",
         email: "",
+        typeOfIssue: "",
+        subType: "",
+        issue: "",
+        waterHearAge: "",
+        issueDescription: "",
     },
     onSubmit: values => {
         console.log(values)

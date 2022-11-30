@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import './Steps/customer.scss';
 
 
 function Customer() {
@@ -32,12 +33,11 @@ function Customer() {
   }
   return (
     
-    <div>
-        <h6>Customer details</h6>
-        <p>Have we served you in the past?</p>
+    <div className='customer-container'>
+        <h6 className='form-labels'>Have we served you in the past?</h6>
         <div id='btn-customer'>
-            <button onClick={()=>setIsCustomer("yes")}>Yes</button>
-            <button onClick={()=>setIsCustomer("no")}>No</button>
+            <button className='form-customer-btn' onClick={()=>setIsCustomer("yes")}>Yes</button>
+            <button className='form-customer-btn' onClick={()=>setIsCustomer("no")}>No</button>
         </div>
     </div>
   )

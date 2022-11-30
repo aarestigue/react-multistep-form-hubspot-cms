@@ -14,9 +14,9 @@ export default function ProgressBar ({ formTitles, page }){
             if(index < page){
                 return(
                     <div className={`form-step completed`} id={index} >
-                        <span id={`completed`}>
+                        {/* <span id={`completed`}>
                             <img src={complete} alt="step-completed-icon" className='completed-icon' />
-                        </span>
+                        </span> */}
                         <p className='form-step completed-title'>{title}</p>
                     </div>
                 )
@@ -24,15 +24,15 @@ export default function ProgressBar ({ formTitles, page }){
             else if(index === page){
                 return(
                     <div className={`form-step current`} id={index} >
-                        <span id={`current-circle`}></span>
+                        {/* <span id={`current-circle`}></span> */}
                         <p className='form-step current-title'>{title}</p>
                     </div>
                 )
-            }
+                }
             else if(index > page){
                 return (
                     <div className={`form-step ${index}`} id={index} >
-                        <span id={`circle`}></span>
+                        {/* <span id={`circle`}></span> */}
                         <p className='form-step title'>{title}</p>
                     </div>
                         )

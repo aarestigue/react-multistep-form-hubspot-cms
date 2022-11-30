@@ -1,0 +1,15 @@
+.customer-container{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#btn-customer .form-customer-btn{
+    background-color: white;
+    border-radius: 10%;
+    border: none;
+    color: black;
+    margin: 1rem 1rem;
+}

@@ -116,9 +116,24 @@
     margin: 0 0.5rem 0 0.05rem;
   }
 
+  .form-labels-issue{
+    width: 90%;
+    color: rgba(60, 181, 219, 0.6);
+    font-weight: bolder;
+    background-color: rgb(245, 245, 245);
+    margin: 10px 0px 0 0px;
+    padding: 0 1rem 0 1rem;
+
+  }
+
   .form-labels{
-    color: white;
-    margin: 1px 1px 0 1px;
+    width: 90%;
+    color: rgb(0, 0, 0);
+    font-size: calc(12px + 2vmin);
+    font-weight: bolder;
+    background-color: rgb(245, 245, 245, 0);
+    margin: 10px 0px 0 0px;
+    padding: 0 1rem 0 1rem;
   }
 
 
