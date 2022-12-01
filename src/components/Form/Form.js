@@ -37,7 +37,10 @@ const formDisplay = () => {
             <div className='form-container'>
                 <div className='form-header'>
                     
-                    <ProgressBar formTitles={formTitles} page={page}/>
+                    <ProgressBar 
+                    formTitles={formTitles} 
+                    page={page}
+                    />
                     
                 </div>
                 <div className='form-body'>

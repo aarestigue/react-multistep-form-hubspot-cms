@@ -13,6 +13,13 @@ function formikSchema() {
         issue: "",
         waterHearAge: "",
         issueDescription: "",
+        datePicker:"",
+        date:"",
+        time:"",
+        address: "",
+        propertyType:"",
+        isOwner: "",
+
     },
     onSubmit: values => {
         console.log(values)

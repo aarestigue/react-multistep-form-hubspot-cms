@@ -9,16 +9,22 @@ function Details({formik}) {
     	<div className="frame">
 			<div class="center">
 				<div class="dropzone">
-					<img src="http://100dayscss.com/codepen/upload.svg" className="upload-icon" />
-					<input type="file" class="upload-input" />
+					<label htmlFor="file-input">
+						<img src="http://100dayscss.com/codepen/upload.svg" className="upload-icon" />
+					</label>
+					<input id="file-input" type="file" className="file-input" />
 				</div>
 				<div class="dropzone">
-					<img src="http://100dayscss.com/codepen/upload.svg" className="upload-icon" />
-					<input type="file" class="upload-input" />
+					<label htmlFor="file-input">
+						<img src="http://100dayscss.com/codepen/upload.svg" className="upload-icon" />
+					</label>
+					<input id="file-input" type="file" className="file-input" />
 				</div>
 				<div class="dropzone">
-					<img src="http://100dayscss.com/codepen/upload.svg" className="upload-icon" />
-					<input type="file" class="upload-input" />
+					<label htmlFor="file-input">
+						<img src="http://100dayscss.com/codepen/upload.svg" className="upload-icon" />
+					</label>
+					<input id="file-input" type="file" className="file-input" />
 				</div>
 
 				{/* <button type="button" class="btn" name="uploadbutton">Upload file</button> */}

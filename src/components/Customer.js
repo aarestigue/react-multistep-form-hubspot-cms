@@ -10,13 +10,15 @@ function Customer({formik}) {
     if(isCustomer === "yes") {
       console.log("yes")
       return (
-          <div>
+          <div className='form-inputs-container'>
               <h6 className='form-labels'>Let's lookup your details</h6>
-              <label className='form-labels-customer' htmlFor="email">Please enter your email</label>
+              <label className='form-labels-customer' htmlFor="email">Enter your email</label>
               <input 
+              className='form-input'
               type="email" 
               name='email'
               id='email'
+              placeholder='Email'
               value={formik.values.email}
               onChange={formik.handleChange('email')}
               />
@@ -28,8 +30,36 @@ function Customer({formik}) {
       console.log("no")
       return (
           <div className='form-inputs-container'>
+
+              <div className='form-name-info'>
+                <div>
+                  <label className='form-labels-customer' htmlFor="">First Name</label>
+                  <input 
+                  className='form-input'
+                  type="text"
+                  name='firstName'
+                  id='firstName'
+                  placeholder='First Name'
+                  value={formik.values.firstName}
+                  onChange={formik.handleChange('firstName')}
+                  />
+                </div>
+                <div>
+                  <label className='form-labels-customer' htmlFor="">Last Name</label>
+                  <input 
+                  className='form-input'
+                  type="text"
+                  name='lastName'
+                  id='lastName'
+                  placeholder='Last Name'
+                  value={formik.values.lastName}
+                  onChange={formik.handleChange('lastName')} 
+                  />
+                </div>
+              </div>
               <label className='form-labels-customer' htmlFor="email">Email</label>
               <input 
+              className='form-input'
               type="email" 
               name='email'
               id='email'
@@ -38,28 +68,9 @@ function Customer({formik}) {
               onChange={formik.handleChange('email')}
               />
 
-              <label className='form-labels-customer' htmlFor="">First Name</label>
-              <input 
-              type="text"
-              name='firstName'
-              id='firstName'
-              placeholder='First Name'
-              value={formik.values.firstName}
-              onChange={formik.handleChange('firstName')}
-              />
-
-              <label className='form-labels-customer' htmlFor="">Last Name</label>
-              <input 
-              type="text"
-              name='lastName'
-              id='lastName'
-              placeholder='Last Name'
-              value={formik.values.lastName}
-              onChange={formik.handleChange('lastName')} 
-              />
-
               <label className='form-labels-customer' htmlFor="">Phone Number</label>
               <input 
+              className='form-input'
               type="number" 
               name='phoneNumber'
               id='phoneNumber'
