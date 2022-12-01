@@ -22,7 +22,7 @@ function formikSchema() {
 
     },
     onSubmit: values => {
-        console.log(values)
+        console.log(`Sending this form! ${values}`)
     }
   })
 }

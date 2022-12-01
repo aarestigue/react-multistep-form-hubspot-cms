@@ -89,7 +89,7 @@ useEffect(() => {
   return (
     <div className='schedule-container'>
 
-        <h4>Let's Schedule your appointment</h4>
+        <h4 className='form-labels'>Let's Schedule your appointment</h4>
 
         <div className='select-container'>
             <label className='form-labels-issue' htmlFor="">Select a date</label>

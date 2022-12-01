@@ -9,8 +9,8 @@ import addressIcon from '../images/confirm-address.svg';
 function Confirm({formik}) {
     /* pass info as props and send the form */
   return (
-    <section className='confirm-container'>
-        <h4>Review and confirm details</h4>
+    <section className='confirm-container' id='confirm-container'>
+        <h4 className='form-labels'>Review and confirm details</h4>
         <div className='confirm-summary'>
           <div className='confirm-steps'>
           <span className='icon'>

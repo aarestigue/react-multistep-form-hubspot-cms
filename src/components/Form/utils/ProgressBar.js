@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 
 import complete from '../../../images/complete-step.svg'
 
 /* Progressbar */
 
-export default function ProgressBar ({ formTitles, page }){
+export default function ProgressBar ({ formTitles, page, goToPage}){
    
     return (
     <>
@@ -13,7 +13,10 @@ export default function ProgressBar ({ formTitles, page }){
             {formTitles.map((title, index)=> {
             if(index < page){
                 return(
-                    <div className={`form-step completed`} id={index} >
+                    <div 
+                    onClick={()=> goToPage({index})}
+                    className={`form-step completed`} 
+                    id={index} >
                         {/* <span id={`completed`}>
                             <img src={complete} alt="step-completed-icon" className='completed-icon' />
                         </span> */}
@@ -23,7 +26,10 @@ export default function ProgressBar ({ formTitles, page }){
             }
             else if(index === page){
                 return(
-                    <div className={`form-step current`} id={index} >
+                    <div 
+                    onClick={()=> goToPage({index})}
+                    className={`form-step current`} 
+                    id={index} >
                         {/* <span id={`current-circle`}></span> */}
                         <p className='form-step current-title'>{title}</p>
                     </div>
@@ -31,7 +37,10 @@ export default function ProgressBar ({ formTitles, page }){
                 }
             else if(index > page){
                 return (
-                    <div className={`form-step ${index}`} id={index} >
+                    <div 
+                    onClick={()=> goToPage({index})}
+                    className={`form-step ${index}`} 
+                    id={index} >
                         {/* <span id={`circle`}></span> */}
                         <p className='form-step title'>{title}</p>
                     </div>
